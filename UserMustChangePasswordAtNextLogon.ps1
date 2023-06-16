@@ -1,4 +1,5 @@
-﻿$users = get-localuser
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Force
+$users = get-localuser
 foreach ($user in $users) {
 	# Set users password to be changed at next logon for all users
 	$expUser = [ADSI]"WinNT://localhost/$user,user"
